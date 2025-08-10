@@ -77,7 +77,8 @@ class UserController extends Controller
         $user_is_staff = in_array($user_type, Qs::getStaff());
         $user_is_teamSA = in_array($user_type, Qs::getTeamSA());
 
-        $staff_id = Qs::getAppCode() . '/STAFF/' . date('Y/m', strtotime($req->emp_date)) . '/' . mt_rand(1000, 9999);
+        $staff_id = Qs::getAppCode() . '/' . strtoupper($user_type) . '/' . date('Y/m', strtotime($req->emp_date ?? date('Y'))) . '/' . mt_rand(1000, 9999);
+
         $data['username'] = $uname = ($user_is_teamSA) ? $req->username : $staff_id;
 
         $pass = $req->password ?: $user_type;
@@ -129,8 +130,8 @@ class UserController extends Controller
         $data['user_type'] = $user_type;
 
         if ($user_is_staff && !$user_is_teamSA) {
-            // $data['username'] = Qs::getAppCode() . '/STAFF/' . date('Y/m', strtotime($req->emp_date)) . '/' . mt_rand(1000, 9999);
-            $data['username'] = strtolower($req->username);
+            $unamedefault = Qs::getAppCode() . '/' . strtoupper($user_type) . '/' . date('Y/m', strtotime($req->emp_date ?? date('Y'))) . '/' . mt_rand(1000, 9999);
+            $data['username'] = $req->username ? strtolower($req->username) : $unamedefault;
         } else {
             $data['username'] = $user->username;
         }

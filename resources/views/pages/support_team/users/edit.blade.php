@@ -27,8 +27,8 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Username: <span class="text-danger">*</span></label>
-                                <input value="{{ $user->username }}" required type="text" name="username"
-                                    placeholder="Username" class="form-control">
+                                <input value="{{ $user->username }}" type="text" name="username" placeholder="Username"
+                                    class="form-control">
                             </div>
                         </div>
 

@@ -26,6 +26,14 @@
 
                         <div class="col-md-4">
                             <div class="form-group">
+                                <label>Username: <span class="text-danger">*</span></label>
+                                <input value="{{ $user->username }}" required type="text" name="username"
+                                    placeholder="Username" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="form-group">
                                 <label>Nama Lengkap: <span class="text-danger">*</span></label>
                                 <input value="{{ $user->name }}" required type="text" name="name"
                                     placeholder="Nama Lengkap" class="form-control">

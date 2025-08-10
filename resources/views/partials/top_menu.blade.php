@@ -1,3 +1,9 @@
+@php
+    // Memeriksa apakah pengguna adalah siswa dan mengambil record siswa jika ada.
+    // Ini mencegah kesalahan jika pengguna bukan siswa atau record tidak ditemukan.
+    $userRecord = Qs::userIsStudent() ? Qs::findStudentRecord(Auth::user()->id) : null;
+@endphp
+
 <!-- Navbar Utama -->
 <div class="navbar navbar-expand-md navbar-dark">
     <div class="mt-2 mr-5">
@@ -44,7 +50,9 @@
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-right">
-                    <a href="{{ Qs::userIsStudent() ? route('students.show', Qs::hash(Qs::findStudentRecord(Auth::user()->id)->id)) : route('users.show', Qs::hash(Auth::user()->id)) }}"
+                    {{-- <a href="{{ Qs::userIsStudent() ? route('students.show', Qs::hash(Qs::findStudentRecord(Auth::user()->id)->id)) : route('users.show', Qs::hash(Auth::user()->id)) }}"
+                        class="dropdown-item"><i class="icon-user-plus"></i> Profil Saya</a> --}}
+                    <a href="{{ $userRecord ? route('students.show', Qs::hash($userRecord->id)) : route('users.show', Qs::hash(Auth::user()->id)) }}"
                         class="dropdown-item"><i class="icon-user-plus"></i> Profil Saya</a>
                     <div class="dropdown-divider"></div>
                     <a href="{{ route('my_account') }}" class="dropdown-item"><i class="icon-cog5"></i> Pengaturan

@@ -1,220 +1,477 @@
 @extends('layouts.login_master')
 
 @section('content')
-
     <div class="page-content">
         <div class="content-wrapper">
             <div class="content">
                 <div class="card">
                     <div class="card-header">
-                        <h1 class="card-title font-weight-bold text-center">TERMS OF USE</h1>
+                        <h1 class="card-title font-weight-bold text-center">KETENTUAN PENGGUNAAN</h1>
                     </div>
 
                     <div class="card-body">
                         <div class="row">
                             <div style="font-size: 16px;" class="col-md-10 offset-md-1">
-                                <p>Last modified: November 4, 2019</p>
+                                <p>Terakhir diubah: 4 November 2019</p>
 
-                                <h4 class="font-weight-semibold">Acceptance of the Terms of Use</h4>
+                                <h4 class="font-weight-semibold">Penerimaan Ketentuan Penggunaan</h4>
 
-                                <p>These terms of use are entered into by and between You and {{ $app_name }} ("we" or "us"). The following terms and conditions and all documents incorporated by reference (collectively, "Terms of Use"), govern your access to and use of <a target="_blank" href="{{ $app_url }}">{{ $app_url }}</a>, including any content, functionality and services offered on or through <a target="_blank" href="{{ $app_url }}">{{ $app_url }}</a> (the "Website").</p>
+                                <p>Ketentuan penggunaan ini dibuat antara Anda dan {{ $app_name }} ("kami"). Syarat dan
+                                    ketentuan berikut serta semua dokumen yang dimasukkan sebagai referensi (secara
+                                    kolektif, "Ketentuan Penggunaan"), mengatur akses Anda ke dan penggunaan <a
+                                        target="_blank" href="{{ $app_url }}">{{ $app_url }}</a>, termasuk konten,
+                                    fungsionalitas, dan layanan apa pun yang ditawarkan di atau melalui <a target="_blank"
+                                        href="{{ $app_url }}">{{ $app_url }}</a> ("Situs Web").</p>
 
-                                <p>Please read the Terms of Use carefully before you start to use the Website. By using the Website, you accept and agree to be bound and abide by these Terms of Use and our Privacy Policy, found at <a target="_blank" href="{{ route('privacy_policy') }}">{{ route('privacy_policy') }}</a>, incorporated herein by reference. If you do not want to agree to these Terms of Use or the Privacy Policy, you must not access or use the Website.</p>
+                                <p>Harap baca Ketentuan Penggunaan dengan saksama sebelum Anda mulai menggunakan Situs Web.
+                                    Dengan menggunakan Situs Web, Anda menerima dan menyetujui untuk terikat dan mematuhi
+                                    Ketentuan Penggunaan ini dan Kebijakan Privasi kami, yang dapat ditemukan di <a
+                                        target="_blank"
+                                        href="{{ route('privacy_policy') }}">{{ route('privacy_policy') }}</a>, yang
+                                    dimasukkan di sini sebagai referensi. Jika Anda tidak ingin menyetujui Ketentuan
+                                    Penggunaan ini atau Kebijakan Privasi, Anda tidak boleh mengakses atau menggunakan Situs
+                                    Web.</p>
 
-                                <h4 class="font-weight-semibold">Changes To The Terms Of Use</h4>
+                                <h4 class="font-weight-semibold">Perubahan pada Ketentuan Penggunaan</h4>
 
-                                <p>We may revise and update these Terms of Use from time to time in our sole discretion. All changes are effective immediately when we post them. However, any changes to the dispute resolution provisions set forth in Governing Law and Jurisdiction will not apply to any disputes for which the parties have actual notice prior to the date the change is posted on the Website.</p>
+                                <p>Kami dapat merevisi dan memperbarui Ketentuan Penggunaan ini dari waktu ke waktu atas
+                                    kebijakan kami sendiri. Semua perubahan berlaku segera setelah kami mempostingnya.
+                                    Namun, setiap perubahan pada ketentuan penyelesaian sengketa yang ditetapkan dalam Hukum
+                                    yang Mengatur dan Yurisdiksi tidak akan berlaku untuk sengketa apa pun yang telah
+                                    diketahui oleh para pihak sebelum tanggal perubahan diposting di Situs Web.</p>
 
-                                <p>Your continued use of the Website following the posting of revised Terms of Use means that you accept and agree to the changes. You are expected to check this page from time to time so you are aware of any changes, as they are binding on you.</p>
+                                <p>Penggunaan terus-menerus Anda terhadap Situs Web setelah posting Ketentuan Penggunaan
+                                    yang direvisi berarti bahwa Anda menerima dan menyetujui perubahan tersebut. Anda
+                                    diharapkan untuk memeriksa halaman ini dari waktu ke waktu agar Anda mengetahui setiap
+                                    perubahan, karena perubahan tersebut mengikat Anda.</p>
 
-                                <h4 class="font-weight-semibold">Accessing The Website And Account Security</h4>
-                                <p>We reserve the right to withdraw or amend this Website, and any service or material we provide on the Website, in our sole discretion without notice. We will not be liable if for any reason all or any part of the Website is unavailable at any time or for any period. From time to time, we may restrict access to some parts of the Website, or the entire Website, to users.</p>
+                                <h4 class="font-weight-semibold">Akses ke Situs Web dan Keamanan Akun</h4>
+                                <p>Kami berhak untuk menarik atau mengubah Situs Web ini, serta layanan atau materi apa pun
+                                    yang kami sediakan di Situs Web, atas kebijakan kami sendiri tanpa pemberitahuan. Kami
+                                    tidak akan bertanggung jawab jika karena alasan apa pun seluruh atau sebagian Situs Web
+                                    tidak tersedia kapan saja atau untuk periode apa pun. Dari waktu ke waktu, kami dapat
+                                    membatasi akses ke beberapa bagian Situs Web, atau seluruh Situs Web, kepada pengguna.
+                                </p>
 
-                                <h3>Article I</h3>
-                                <p>You are responsible for:</p>
-
-                                <ul>
-                                    <li>Making all arrangements necessary for you to have access to the Website.</li>
-                                    <li>Ensuring that all persons who access the Website through your internet connection are aware of these Terms of Use and comply with them.</li>
-                                </ul>
-
-                                <p>To access the Website or some of the resources it offers, you may be asked to provide certain registration details or other information. It is a condition of your use of the Website that all the information you provide on the Website is correct, current, and complete. You agree that all information you provide to register with this Website or otherwise, including but not limited to through the use of any interactive features on the Website, is governed by our Privacy Policy, and you consent to all actions we take with respect to your information consistent with our Privacy Policy.</p>
-
-                                <p>If you choose, or are provided with, a user name, password or any other piece of information as part of our security procedures, you must treat such information as confidential, and you must not disclose it to any other person or entity. You also acknowledge that your account is personal to you and agree not to provide any other person with access to this Website or portions of it using your user name, password or other security information. You agree to notify us immediately of any unauthorized access to or use of your user name or password or any other breach of security. You also agree to ensure that you exit from your account at the end of each session. You should use particular caution when accessing your account from a public or shared computer so that others are not able to view or record your password or other personal information.</p>
-
-                                <p>We have the right to disable any user name, password, or other identifier, whether chosen by you or provided by us, at any time in our sole discretion for any or no reason, including if, in our opinion, you have violated any provision of these Terms of Use.</p>
-
-                                <h4 class="font-weight-semibold">Intellectual Property Rights</h4>
-
-                               <p>The Website and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by us, our licensors, or other providers of such material and are protected by United States and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws.</p>
-
-                                <p>These Terms of Use permit you to use the Website for your personal, non-commercial use only. You must not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Website in violation of any laws.</p>
-
-                                <p>You must not access or use for any commercial purposes any part of the Website or any services or materials available through the Website.</p>
-
-                                <h4 class="font-weight-semibold">Trademarks</h4>
-
-                                <p>The {{ $app_name }} name and all related names, logos, slogans, mottos, and designs are trademarks of ours or our affiliates or licensors. You must not use such marks without our prior written permission. All other names, logos, product and service names, designs and slogans on this Website are the trademarks of their respective owners.</p>
-
-                                <h4 class="font-weight-semibold">Prohibited Uses</h4>
-
-                                <ul>
-                                    <li>You may use the Website only for lawful purposes and in accordance with these Terms of Use. You agree not to use the Website:</li>
-                                    <li>In any way that violates any applicable federal, state, local, or international law or regulation (including, without limitation, any laws regarding the export of data or software to and from the US or other countries).</li>
-                                    <li>For the purpose of exploiting, harming or attempting to exploit or harm minors in any way by exposing them to inappropriate content, asking for personally identifiable information or otherwise.</li>
-                                    <li>To send, knowingly receive, upload, download, use or re-use any material which does not comply with the Content Standards set out in these Terms of Use.</li>
-                                    <li>To transmit, or procure the sending of, any advertising or promotional material without our prior written consent, including any "junk mail", "chain letter" or "spam" or any other similar solicitation.</li>
-                                    <li>To impersonate or attempt to impersonate us, one of our employees, another user or any other person or entity (including, without limitation, by using e-mail addresses or screen names associated with any of the foregoing.)</li>
-                                    <li>To engage in any other conduct that restricts or inhibits anyone's use or enjoyment of the Website, or which, as determined by us, may harm us or users of the Website or expose them to liability.</li>
-                                </ul>
-
-                                <h4 class="font-weight-semibold">Additionally, You Agree Not To:</h4>
-                                <ul>
-                                    <li>Use the Website in any manner that could disable, overburden, damage, or impair the site or interfere with any other party's use of the Website, including their ability to engage in real time activities through the Website.</li>
-                                    <li>Use any robot, spider or other automatic device, process or means to access the Website for any purpose, including monitoring or copying any of the material on the Website.</li>
-                                    <li>Use any manual process to monitor or copy any of the material on the Website or for any other unauthorized purpose without our prior written consent.</li>
-                                    <li>Use any device, software or routine that interferes with the proper working of the Website.</li>
-                                    <li>Introduce any viruses, Trojan horses, worms, logic bombs or other material which is malicious or technologically harmful.</li>
-                                    <li>Attempt to gain unauthorized access to, interfere with, damage or disrupt any parts of the Website, the server on which the Website is stored, or any server, computer or database connected to the Website.</li>
-                                    <li>Attack the Website via a denial-of-service attack or a distributed denial-of-service attack.</li>
-                                    <li>Use the Website in any manner that violates any applicable {{ $app_name }} policy, rule, or procedure.</li>
-                                    <li>Use the Website in any manner that contravenes Catholic Mercy tradition, faith, and morals or the legacy of Catholic Mercy education.</li>
-                                    <li>Otherwise attempt to interfere with the proper working of the Website.</li>
-                                </ul>
-
-                                <h4 class="font-weight-semibold">User Contributions</h4>
-
-                                <p>The Website may contain message boards, chat rooms, personal web pages or profiles, forums, bulletin boards, and other interactive features (collectively, "Interactive Services") that allow users to post, submit, publish, display or transmit to other users or other persons (hereinafter, "post") content or materials (collectively, "User Contributions") on or through the Website.</p>
-
-                                <p>All User Contributions must comply with the Content Standards set out in these Terms of Use.</p>
-
-                                <p>Any User Contribution you post to the site will be considered non-confidential and non-proprietary. By providing any User Contribution on the Website, you grant us and our licensees, successors and assigns the right to use, reproduce, modify, perform, display, distribute and otherwise disclose to third parties any such material.</p>
-
-                                <p>You represent and warrant that:</p>
+                                <h3>Pasal I</h3>
+                                <p>Anda bertanggung jawab untuk:</p>
 
                                 <ul>
-                                    <li>You own or control all rights in and to the User Contributions and have the right to grant the license granted above to us and our licensees, successors and assigns.</li>
-                                    <li> All of your User Contributions do and will comply with these Terms of Use.</li>
+                                    <li>Membuat semua pengaturan yang diperlukan bagi Anda untuk memiliki akses ke Situs
+                                        Web.</li>
+                                    <li>Memastikan bahwa semua orang yang mengakses Situs Web melalui koneksi internet Anda
+                                        mengetahui Ketentuan Penggunaan ini dan mematuhinya.</li>
                                 </ul>
 
-                                <p>You understand and acknowledge that you are responsible for any User Contributions you submit or contribute, and you, not us, have full responsibility for such content, including its legality, reliability, accuracy, and appropriateness.</p>
+                                <p>Untuk mengakses Situs Web atau beberapa sumber daya yang ditawarkannya, Anda mungkin
+                                    diminta untuk memberikan detail pendaftaran tertentu atau informasi lainnya. Merupakan
+                                    syarat penggunaan Situs Web Anda bahwa semua informasi yang Anda berikan di Situs Web
+                                    adalah benar, terkini, dan lengkap. Anda setuju bahwa semua informasi yang Anda berikan
+                                    untuk mendaftar dengan Situs Web ini atau sebaliknya, termasuk tetapi tidak terbatas
+                                    pada melalui penggunaan fitur interaktif apa pun di Situs Web, diatur oleh Kebijakan
+                                    Privasi kami, dan Anda menyetujui semua tindakan yang kami ambil sehubungan dengan
+                                    informasi Anda yang konsisten dengan Kebijakan Privasi kami.</p>
 
-                                <p>We are not responsible, or liable to any third party, for the content or accuracy of any User Contributions posted by you or any other user of the Website.</p>
+                                <p>Jika Anda memilih, atau diberikan, nama pengguna, kata sandi, atau bagian informasi
+                                    lainnya sebagai bagian dari prosedur keamanan kami, Anda harus memperlakukan informasi
+                                    tersebut sebagai rahasia, dan Anda tidak boleh mengungkapkannya kepada orang atau
+                                    entitas lain mana pun. Anda juga mengakui bahwa akun Anda bersifat pribadi bagi Anda dan
+                                    setuju untuk tidak memberikan akses kepada orang lain ke Situs Web ini atau
+                                    bagian-bagiannya menggunakan nama pengguna, kata sandi, atau informasi keamanan Anda
+                                    lainnya. Anda setuju untuk segera memberi tahu kami tentang setiap akses atau penggunaan
+                                    nama pengguna atau kata sandi Anda yang tidak sah atau pelanggaran keamanan lainnya.
+                                    Anda juga setuju untuk memastikan bahwa Anda keluar dari akun Anda di akhir setiap sesi.
+                                    Anda harus berhati-hati saat mengakses akun Anda dari komputer publik atau bersama agar
+                                    orang lain tidak dapat melihat atau merekam kata sandi atau informasi pribadi Anda
+                                    lainnya.</p>
 
-                                <h4 class="font-weight-semibold">Monitoring And Enforcement; Termination</h4>
-                                <p>We have the right to:</p>
+                                <p>Kami berhak untuk menonaktifkan nama pengguna, kata sandi, atau pengidentifikasi lainnya,
+                                    baik yang dipilih oleh Anda atau yang kami berikan, kapan saja atas kebijakan kami
+                                    sendiri karena alasan apa pun, termasuk jika, menurut pendapat kami, Anda telah
+                                    melanggar ketentuan apa pun dari Ketentuan Penggunaan ini.</p>
+
+                                <h4 class="font-weight-semibold">Hak Kekayaan Intelektual</h4>
+
+                                <p> Situs Web dan seluruh isinya, fitur dan fungsionalitasnya (termasuk tetapi tidak
+                                    terbatas pada semua informasi, perangkat lunak, teks, tampilan, gambar, video dan audio,
+                                    serta desain, pemilihan, dan pengaturannya), dimiliki oleh kami, pemberi lisensi kami,
+                                    atau penyedia lain dari materi tersebut dan dilindungi oleh undang-undang hak cipta,
+                                    merek dagang, paten, rahasia dagang, dan hak kekayaan intelektual atau kepemilikan
+                                    lainnya di Amerika Serikat dan internasional.</p>
+
+                                <p>Ketentuan Penggunaan ini mengizinkan Anda untuk menggunakan Situs Web hanya untuk
+                                    penggunaan pribadi dan non-komersial Anda. Anda tidak boleh mereproduksi,
+                                    mendistribusikan, memodifikasi, membuat karya turunan, menampilkan secara publik,
+                                    melakukan secara publik, menerbitkan ulang, mengunduh, menyimpan, atau mentransmisikan
+                                    materi apa pun dari Situs Web kami yang melanggar hukum apa pun.</p>
+
+                                <p>Anda tidak boleh mengakses atau menggunakan untuk tujuan komersial apa pun bagian mana
+                                    pun dari Situs Web atau layanan atau materi apa pun yang tersedia melalui Situs Web.</p>
+
+                                <h4 class="font-weight-semibold">Merek Dagang</h4>
+
+                                <p>Nama {{ $app_name }} dan semua nama, logo, slogan, moto, dan desain terkait adalah
+                                    merek dagang kami atau afiliasi atau pemberi lisensi kami. Anda tidak boleh menggunakan
+                                    merek tersebut tanpa izin tertulis kami sebelumnya. Semua nama, logo, nama produk dan
+                                    layanan, desain, dan slogan lain di Situs Web ini adalah merek dagang dari pemiliknya
+                                    masing-masing.</p>
+
+                                <h4 class="font-weight-semibold">Penggunaan yang Dilarang</h4>
 
                                 <ul>
-                                    <li>Remove or refuse to post any User Contributions for any or no reason in our sole discretion.</li>
-                                    <li>Take any action with respect to any User Contribution that we deem necessary or appropriate in our sole discretion, including if we believe that such User Contribution violates the Terms of Use, including the Content Standards, infringes any intellectual property right or other right of any person or entity, threatens the personal safety of users of the Website or the public or could create liability for us.</li>
-                                    <li>Disclose your identity or other information about you to any third party who claims that material posted by you violates their rights, including their intellectual property rights or their right to privacy.</li>
-                                    <li>Take appropriate legal action, including without limitation, referral to law enforcement, for any illegal or unauthorized use of the Website.</li>
-                                    <li> Terminate or suspend your access to all or part of the Website for any or no reason, including without limitation, any violation of these Terms of Use.</li>
+                                    <li>Anda dapat menggunakan Situs Web hanya untuk tujuan yang sah dan sesuai dengan
+                                        Ketentuan Penggunaan ini. Anda setuju untuk tidak menggunakan Situs Web:</li>
+                                    <li>Dengan cara apa pun yang melanggar hukum atau peraturan federal, negara bagian,
+                                        lokal, atau internasional yang berlaku (termasuk, tanpa batasan, undang-undang apa
+                                        pun mengenai ekspor data atau perangkat lunak ke dan dari AS atau negara lain).</li>
+                                    <li>Untuk tujuan mengeksploitasi, membahayakan atau mencoba mengeksploitasi atau
+                                        membahayakan anak di bawah umur dengan cara apa pun dengan memaparkan mereka pada
+                                        konten yang tidak pantas, meminta informasi yang dapat diidentifikasi secara
+                                        pribadi, atau sebaliknya.</li>
+                                    <li>Untuk mengirim, secara sadar menerima, mengunggah, mengunduh, menggunakan, atau
+                                        menggunakan kembali materi apa pun yang tidak mematuhi Standar Konten yang
+                                        ditetapkan dalam Ketentuan Penggunaan ini.</li>
+                                    <li>Untuk mengirimkan, atau mendapatkan pengiriman, materi iklan atau promosi apa pun
+                                        tanpa persetujuan tertulis kami sebelumnya, termasuk "surat sampah", "surat
+                                        berantai" atau "spam" atau permintaan serupa lainnya.</li>
+                                    <li>Untuk meniru atau mencoba meniru kami, salah satu karyawan kami, pengguna lain atau
+                                        orang atau entitas lain (termasuk, tanpa batasan, dengan menggunakan alamat email
+                                        atau nama layar yang terkait dengan salah satu hal di atas.)</li>
+                                    <li>Untuk terlibat dalam perilaku lain apa pun yang membatasi atau menghambat penggunaan
+                                        atau kenikmatan Situs Web oleh siapa pun, atau yang, sebagaimana ditentukan oleh
+                                        kami, dapat membahayakan kami atau pengguna Situs Web atau membuat mereka
+                                        bertanggung jawab.</li>
                                 </ul>
 
-                               <p> Without limiting the foregoing, we have the right to fully cooperate with any law enforcement authorities or court order requesting or directing us to disclose the identity or other information of anyone posting any materials on or through the Website.</p>
+                                <h4 class="font-weight-semibold">Selain Itu, Anda Setuju untuk Tidak:</h4>
+                                <ul>
+                                    <li>Menggunakan Situs Web dengan cara apa pun yang dapat menonaktifkan, membebani,
+                                        merusak, atau mengganggu situs atau mengganggu penggunaan Situs Web oleh pihak lain
+                                        mana pun, termasuk kemampuan mereka untuk terlibat dalam aktivitas waktu nyata
+                                        melalui Situs Web.</li>
+                                    <li>Menggunakan robot, spider, atau perangkat otomatis lainnya, proses atau sarana untuk
+                                        mengakses Situs Web untuk tujuan apa pun, termasuk memantau atau menyalin materi apa
+                                        pun di Situs Web.</li>
+                                    <li>Menggunakan proses manual apa pun untuk memantau atau menyalin materi apa pun di
+                                        Situs Web atau untuk tujuan tidak sah lainnya tanpa persetujuan tertulis kami
+                                        sebelumnya.</li>
+                                    <li>Menggunakan perangkat, perangkat lunak, atau rutinitas apa pun yang mengganggu kerja
+                                        Situs Web yang semestinya.</li>
+                                    <li>Memperkenalkan virus, trojan, worm, bom logika, atau materi lain apa pun yang
+                                        berbahaya atau merusak secara teknologi.</li>
+                                    <li>Mencoba mendapatkan akses tidak sah ke, mengganggu, merusak, atau mengganggu bagian
+                                        mana pun dari Situs Web, server tempat Situs Web disimpan, atau server, komputer,
+                                        atau basis data apa pun yang terhubung ke Situs Web.</li>
+                                    <li>Menyerang Situs Web melalui serangan denial-of-service atau serangan
+                                        denial-of-service terdistribusi.</li>
+                                    <li>Menggunakan Situs Web dengan cara apa pun yang melanggar kebijakan, aturan, atau
+                                        prosedur {{ $app_name }} yang berlaku.</li>
+                                    <li>Menggunakan Situs Web dengan cara apa pun yang bertentangan dengan tradisi, iman,
+                                        dan moral Katolik Mercy atau warisan pendidikan Katolik Mercy.</li>
+                                    <li>Atau mencoba mengganggu kerja Situs Web yang semestinya.</li>
+                                </ul>
 
-                                <p>YOU WAIVE AND HOLD HARMLESS {{ strtoupper($app_name) }} FROM ANY CLAIMS RESULTING FROM ANY ACTION TAKEN BY {{ strtoupper($app_name) }} DURING OR AS A RESULT OF ITS INVESTIGATIONS AND FROM ANY ACTIONS TAKEN AS A CONSEQUENCE OF INVESTIGATIONS BY {{ strtoupper($app_name) }} OR LAW ENFORCEMENT AUTHORITIES.</p>
+                                <h4 class="font-weight-semibold">Kontribusi Pengguna</h4>
 
-                                <p>However, we do not undertake to review all material before it is posted on the Website, and cannot ensure prompt removal of objectionable material after it has been posted. Accordingly, we assume no liability for any action or inaction regarding transmissions, communications, or content provided by any user or third party. We have no liability or responsibility to anyone for performance or nonperformance of the activities described in this section.</p>
+                                <p>Situs Web mungkin berisi papan pesan, ruang obrolan, halaman web pribadi atau profil,
+                                    forum, papan buletin, dan fitur interaktif lainnya (secara kolektif, "Layanan
+                                    Interaktif") yang memungkinkan pengguna untuk memposting, mengirimkan, menerbitkan,
+                                    menampilkan, atau mentransmisikan kepada pengguna lain atau orang lain (selanjutnya,
+                                    "memposting") konten atau materi (secara kolektif, "Kontribusi Pengguna") di atau
+                                    melalui Situs Web.</p>
 
-                                <h4 class="font-weight-semibold">Content Standards</h4>
+                                <p>Semua Kontribusi Pengguna harus sepenuhnya mematuhi Standar Konten yang ditetapkan dalam
+                                    Ketentuan Penggunaan ini.</p>
 
-                                <p>These content standards apply to any and all User Contributions and use of Interactive Services. User Contributions must in their entirety comply with all applicable federal, state, local and international laws and regulations. Without limiting the foregoing, User Contributions must not:</p>
+                                <p>Kontribusi Pengguna apa pun yang Anda posting ke situs akan dianggap tidak rahasia dan
+                                    non-proprietary. Dengan menyediakan Kontribusi Pengguna apa pun di Situs Web, Anda
+                                    memberikan hak kepada kami dan pemberi lisensi, penerus, dan penerima kami untuk
+                                    menggunakan, mereproduksi, memodifikasi, melakukan, menampilkan, mendistribusikan, dan
+                                    mengungkapkan materi tersebut kepada pihak ketiga.</p>
+
+                                <p>Anda menyatakan dan menjamin bahwa:</p>
 
                                 <ul>
-                                    <li> Contain any material which is defamatory, obscene, indecent, abusive, offensive, harassing, violent, hateful, inflammatory or otherwise objectionable.</li>
-                                    <li> Promote sexually explicit or pornographic material, violence, or discrimination based on race, sex, religion, nationality, disability, sexual orientation or age.</li>
-                                    <li> Infringe any patent, trademark, trade secret, copyright or other intellectual property or other rights of any other person.</li>
-                                    <li>Violate the legal rights (including the rights of publicity and privacy) of others or contain any material that could give rise to any civil or criminal liability under applicable laws or regulations or that otherwise may be in conflict with these Terms of Use and our <a target="_blank" href="{{ route('privacy_policy') }}">Privacy Policy</a>.</li>
-                                    <li>Be likely to deceive any person.</li>
-                                    <li>Promote any illegal activity, or advocate, promote or assist any unlawful act.</li>
-                                    <li>Cause annoyance, inconvenience or needless anxiety or be likely to upset, embarrass, alarm or annoy any other person.</li>
-                                    <li>Impersonate any person, or misrepresent your identity or affiliation with any person or organization.</li>
-                                    <li>Involve commercial activities or sales, such as contests, sweepstakes and other sales promotions, barter or advertising.</li>
-                                    <li>Give the impression that they emanate from or are endorsed by us or any other person or entity, if this is not the case.</li>
+                                    <li>Anda memiliki atau mengontrol semua hak atas dan pada Kontribusi Pengguna dan
+                                        memiliki hak untuk memberikan lisensi yang diberikan di atas kepada kami dan pemberi
+                                        lisensi, penerus, dan penerima kami.</li>
+                                    <li> Semua Kontribusi Pengguna Anda mematuhi dan akan mematuhi Ketentuan Penggunaan ini.
+                                    </li>
                                 </ul>
 
-                                <h4 class="font-weight-semibold">Copyright Infringement</h4>
-                                <p>If you believe that any User Contributions violate your copyright, please contact us</p>
+                                <p>Anda memahami dan mengakui bahwa Anda bertanggung jawab atas Kontribusi Pengguna apa pun
+                                    yang Anda kirimkan atau kontribusikan, dan Anda, bukan kami, memiliki tanggung jawab
+                                    penuh atas konten tersebut, termasuk legalitas, keandalan, keakuratan, dan
+                                    kesesuaiannya.</p>
 
-                                <h5 class="font-weight-semibold">Reliance on Information Posted</h5>
+                                <p>Kami tidak bertanggung jawab, atau berkewajiban kepada pihak ketiga mana pun, atas konten
+                                    atau keakuratan Kontribusi Pengguna apa pun yang diposting oleh Anda atau pengguna lain
+                                    dari Situs Web.</p>
 
-                                <p>The information presented on or through the Website is made available solely for general information purposes. We do not warrant the accuracy, completeness or usefulness of this information. Any reliance you place on such information is strictly at your own risk. We disclaim all liability and responsibility arising from any reliance placed on such materials by you or any other visitor to the Website, or by anyone who may be informed of any of its contents.</p>
+                                <h4 class="font-weight-semibold">Pemantauan dan Penegakan; Penghentian</h4>
+                                <p>Kami berhak untuk:</p>
 
-                                <p>This Website may include content provided by third parties, including materials provided by other users, bloggers and third-party licensors, syndicators, aggregators and/or reporting services. All statements and/or opinions expressed in these materials, and all articles and responses to questions and other content, other than the content provided by us, are solely the opinions and the responsibility of the person or entity providing those materials. These materials do not necessarily reflect the opinion of us. We are not responsible, or liable to you or any third party, for the content or accuracy of any materials provided by any third parties.</p>
+                                <ul>
+                                    <li>Menghapus atau menolak untuk memposting Kontribusi Pengguna apa pun karena alasan
+                                        apa pun atau tanpa alasan atas kebijakan kami sendiri.</li>
+                                    <li>Mengambil tindakan apa pun sehubungan dengan Kontribusi Pengguna apa pun yang kami
+                                        anggap perlu atau sesuai atas kebijakan kami sendiri, termasuk jika kami yakin bahwa
+                                        Kontribusi Pengguna tersebut melanggar Ketentuan Penggunaan, termasuk Standar
+                                        Konten, melanggar hak kekayaan intelektual atau hak lain dari orang atau entitas
+                                        mana pun, mengancam keselamatan pribadi pengguna Situs Web atau publik atau dapat
+                                        menimbulkan tanggung jawab bagi kami.</li>
+                                    <li>Mengungkapkan identitas Anda atau informasi lain tentang Anda kepada pihak ketiga
+                                        mana pun yang mengklaim bahwa materi yang diposting oleh Anda melanggar hak mereka,
+                                        termasuk hak kekayaan intelektual atau hak privasi mereka.</li>
+                                    <li>Mengambil tindakan hukum yang sesuai, termasuk tanpa batasan, rujukan ke penegak
+                                        hukum, untuk setiap penggunaan Situs Web yang ilegal atau tidak sah.</li>
+                                    <li> Menghentikan atau menangguhkan akses Anda ke semua atau sebagian Situs Web karena
+                                        alasan apa pun atau tanpa alasan, termasuk tanpa batasan, setiap pelanggaran
+                                        Ketentuan Penggunaan ini.</li>
+                                </ul>
 
-                                <h4 class="font-weight-semibold">Changes To The Website</h4>
-                                <p>We may update the content on this Website from time to time, but its content is not necessarily complete or up-to-date. Any of the material on the Website may be out of date at any given time, and we are under no obligation to update such material.</p>
+                                <p> Tanpa membatasi hal tersebut di atas, kami berhak untuk sepenuhnya bekerja sama dengan
+                                    otoritas penegak hukum atau perintah pengadilan apa pun yang meminta atau mengarahkan
+                                    kami untuk mengungkapkan identitas atau informasi lain dari siapa pun yang memposting
+                                    materi apa pun di atau melalui Situs Web.</p>
 
-                                <p>Information About You and Your Visits to the Website</p>
+                                <p>ANDA MELEPAS DAN MEMBEBASKAN {{ strtoupper($app_name) }} DARI KLAIM APA PUN YANG TIMBUL
+                                    DARI TINDAKAN APA PUN YANG DIAMBIL OLEH {{ strtoupper($app_name) }} SELAMA ATAU SEBAGAI
+                                    AKIBAT DARI INVESTIGASINYA DAN DARI TINDAKAN APA PUN YANG DIAMBIL SEBAGAI KONSEKUENSI
+                                    DARI INVESTIGASI OLEH {{ strtoupper($app_name) }} ATAU OTORITAS PENEGAK HUKUM.</p>
 
-                                <p>All information we collect on this Website is subject to our Privacy Policy. By using the Website, you consent to all actions taken by us with respect to your information in compliance with the <a target="_blank" href="{{ route('privacy_policy') }}">Privacy Policy</a>.</p>
+                                <p>Namun, kami tidak berjanji untuk meninjau semua materi sebelum diposting di Situs Web,
+                                    dan tidak dapat memastikan penghapusan materi yang tidak pantas secara cepat setelah
+                                    diposting. Oleh karena itu, kami tidak bertanggung jawab atas tindakan atau kelambanan
+                                    apa pun mengenai transmisi, komunikasi, atau konten yang disediakan oleh pengguna atau
+                                    pihak ketiga mana pun. Kami tidak memiliki kewajiban atau tanggung jawab kepada siapa
+                                    pun atas kinerja atau non-kinerja aktivitas yang dijelaskan dalam bagian ini.</p>
 
-                                <h3>Article II</h3>
+                                <h4 class="font-weight-semibold">Standar Konten</h4>
 
-                                <h4 class="font-weight-semibold">Linking to the Website and Social Media Features</h4>
+                                <p>Standar konten ini berlaku untuk setiap dan semua Kontribusi Pengguna dan penggunaan
+                                    Layanan Interaktif. Kontribusi Pengguna harus sepenuhnya mematuhi semua hukum dan
+                                    peraturan federal, negara bagian, lokal, dan internasional yang berlaku. Tanpa membatasi
+                                    hal tersebut di atas, Kontribusi Pengguna tidak boleh:</p>
 
-                                <p>vYou may link to our homepage, provided you do so in a way that is fair and legal and does not damage our reputation or take advantage of it, but you must not establish a link in such a way as to suggest any form of association, approval or endorsement on our part without our express written consent.</p>
+                                <ul>
+                                    <li> Berisi materi apa pun yang memfitnah, cabul, tidak senonoh, kasar, menyinggung,
+                                        melecehkan, kejam, penuh kebencian, menghasut atau tidak menyenangkan lainnya.</li>
+                                    <li> Mempromosikan materi seksual eksplisit atau pornografi, kekerasan, atau
+                                        diskriminasi berdasarkan ras, jenis kelamin, agama, kebangsaan, disabilitas,
+                                        orientasi seksual, atau usia.</li>
+                                    <li> Melanggar paten, merek dagang, rahasia dagang, hak cipta, atau kekayaan intelektual
+                                        lainnya atau hak lain dari orang lain mana pun.</li>
+                                    <li>Melanggar hak hukum (termasuk hak publisitas dan privasi) orang lain atau berisi
+                                        materi apa pun yang dapat menimbulkan tanggung jawab perdata atau pidana berdasarkan
+                                        hukum atau peraturan yang berlaku atau yang dapat bertentangan dengan Ketentuan
+                                        Penggunaan ini dan <a target="_blank"
+                                            href="{{ route('privacy_policy') }}">Kebijakan Privasi</a> kami.</li>
+                                    <li>Cenderung menipu siapa pun.</li>
+                                    <li>Mempromosikan aktivitas ilegal apa pun, atau menganjurkan, mempromosikan, atau
+                                        membantu tindakan melanggar hukum apa pun.</li>
+                                    <li>Menyebabkan gangguan, ketidaknyamanan, atau kecemasan yang tidak perlu atau
+                                        cenderung membuat orang lain kesal, malu, khawatir, atau jengkel.</li>
+                                    <li>Meniru orang lain, atau salah menggambarkan identitas atau afiliasi Anda dengan
+                                        orang atau organisasi mana pun.</li>
+                                    <li>Melibatkan aktivitas atau penjualan komersial, seperti kontes, undian, dan promosi
+                                        penjualan lainnya, barter, atau iklan.</li>
+                                    <li>Memberikan kesan bahwa mereka berasal dari atau didukung oleh kami atau orang atau
+                                        entitas lain mana pun, jika ini tidak benar.</li>
+                                </ul>
 
-                                <p>You agree to cooperate with us in removing any link we ask you to. We reserve the right to withdraw linking permission without notice.</p>
+                                <h4 class="font-weight-semibold">Pelanggaran Hak Cipta</h4>
+                                <p>Jika Anda yakin bahwa Kontribusi Pengguna apa pun melanggar hak cipta Anda, silakan
+                                    hubungi kami</p>
 
-                                <p>We may disable all or any social media features and any links at any time without notice in our discretion.</p>
+                                <h5 class="font-weight-semibold">Ketergantungan pada Informasi yang Diposting</h5>
 
-                                <h4 class="font-weight-semibold">Links from the Website</h4>
+                                <p>Informasi yang disajikan di atau melalui Situs Web disediakan semata-mata untuk tujuan
+                                    informasi umum. Kami tidak menjamin keakuratan, kelengkapan, atau kegunaan informasi
+                                    ini. Setiap ketergantungan yang Anda tempatkan pada informasi tersebut sepenuhnya atas
+                                    risiko Anda sendiri. Kami menolak semua tanggung jawab dan kewajiban yang timbul dari
+                                    ketergantungan apa pun pada materi tersebut oleh Anda atau pengunjung lain ke Situs Web,
+                                    atau oleh siapa pun yang mungkin diberi tahu tentang isinya.</p>
 
-                                <p>If the Website contains links to other sites and resources provided by third parties, these links are provided for your convenience only. This includes links contained in advertisements, including banner advertisements and sponsored links. We have no control over the contents of those sites or resources, and accept no responsibility for them or for any loss or damage that may arise from your use of them. If you decide to access any of the third party websites linked to this Website, you do so entirely at your own risk and subject to the terms and conditions of use for such websites.</p>
+                                <p>Situs Web ini mungkin menyertakan konten yang disediakan oleh pihak ketiga, termasuk
+                                    materi yang disediakan oleh pengguna lain, blogger, dan pemberi lisensi pihak ketiga,
+                                    sindikator, agregator, dan/atau layanan pelaporan. Semua pernyataan dan/atau pendapat
+                                    yang diungkapkan dalam materi ini, dan semua artikel dan tanggapan terhadap pertanyaan
+                                    dan konten lainnya, selain konten yang disediakan oleh kami, semata-mata merupakan
+                                    pendapat dan tanggung jawab orang atau entitas yang menyediakan materi tersebut. Materi
+                                    ini tidak selalu mencerminkan pendapat kami. Kami tidak bertanggung jawab, atau
+                                    berkewajiban kepada Anda atau pihak ketiga mana pun, atas konten atau keakuratan materi
+                                    apa pun yang disediakan oleh pihak ketiga mana pun.</p>
 
-                                <h4 class="font-weight-semibold">Disclaimer of Warranties</h4>
+                                <h4 class="font-weight-semibold">Perubahan pada Situs Web</h4>
+                                <p>Kami dapat memperbarui konten di Situs Web ini dari waktu ke waktu, tetapi isinya tidak
+                                    selalu lengkap atau terkini. Materi apa pun di Situs Web mungkin sudah usang pada waktu
+                                    tertentu, dan kami tidak memiliki kewajiban untuk memperbarui materi tersebut.</p>
 
-                                <p>You understand that we cannot and do not guarantee or warrant that files available for downloading from the internet or the Website will be free of viruses or other destructive code. You are responsible for implementing sufficient procedures and checkpoints to satisfy your particular requirements for anti-virus protection and accuracy of data input and output, and for maintaining a means external to our site for any reconstruction of any lost data. WE WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGE CAUSED BY A DISTRIBUTED DENIAL-OF-SERVICE ATTACK, VIRUSES OR OTHER TECHNOLOGICALLY HARMFUL MATERIAL THAT MAY INFECT YOUR COMPUTER EQUIPMENT, COMPUTER PROGRAMS, DATA OR OTHER PROPRIETARY MATERIAL DUE TO YOUR USE OF THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR TO YOUR DOWNLOADING OF ANY MATERIAL POSTED ON IT, OR ON ANY WEBSITE LINKED TO IT.</p>
+                                <p>Informasi Tentang Anda dan Kunjungan Anda ke Situs Web</p>
 
-                                <p>YOUR USE OF THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE IS AT YOUR OWN RISK. THE WEBSITE, ITS CONTENT AND ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. NEITHER {{ strtoupper($app_name) }} NOR ANY PERSON ASSOCIATED WITH {{ strtoupper($app_name) }} MAKES ANY WARRANTY OR REPRESENTATION WITH RESPECT TO THE COMPLETENESS, SECURITY, RELIABILITY, QUALITY, ACCURACY OR AVAILABILITY OF THE WEBSITE. WITHOUT LIMITING THE FOREGOING, NEITHER {{ strtoupper($app_name) }} NOR ANYONE ASSOCIATED WITH {{ strtoupper($app_name) }} REPRESENTS OR WARRANTS THAT THE WEBSITE, ITS CONTENT OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL BE ACCURATE, RELIABLE, ERROR-FREE OR UNINTERRUPTED, THAT DEFECTS WILL BE CORRECTED, THAT OUR SITE OR THE SERVER THAT MAKES IT AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS OR THAT THE WEBSITE OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE WILL OTHERWISE MEET YOUR NEEDS OR EXPECTATIONS.</p>
+                                <p>Semua informasi yang kami kumpulkan di Situs Web ini tunduk pada Kebijakan Privasi kami.
+                                    Dengan menggunakan Situs Web, Anda menyetujui semua tindakan yang kami ambil sehubungan
+                                    dengan informasi Anda sesuai dengan <a target="_blank"
+                                        href="{{ route('privacy_policy') }}">Kebijakan Privasi</a>.</p>
 
-                                <p>{{ strtoupper($app_name) }} HEREBY DISCLAIMS ALL WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, STATUTORY OR OTHERWISE, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF NON-INFRINGEMENT.</p>
+                                <h3>Pasal II</h3>
 
-                                <p>THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.</p>
+                                <h4 class="font-weight-semibold">Menautkan ke Situs Web dan Fitur Media Sosial</h4>
 
-                                <h4 class="font-weight-semibold">Limitation on Liability</h4>
+                                <p>Anda dapat menautkan ke beranda kami, asalkan Anda melakukannya dengan cara yang adil dan
+                                    legal dan tidak merusak reputasi kami atau memanfaatkannya, tetapi Anda tidak boleh
+                                    membuat tautan dengan cara yang menyarankan bentuk asosiasi, persetujuan, atau dukungan
+                                    apa pun di pihak kami tanpa persetujuan tertulis kami. </p>
 
-                                <p>IN NO EVENT WILL {{ strtoupper($app_name) }}, ITS AFFILIATES OR THEIR LICENSORS, SERVICE PROVIDERS, EMPLOYEES, AGENTS, OFFICERS OR DIRECTORS BE LIABLE FOR DAMAGES OF ANY KIND, UNDER ANY LEGAL THEORY, ARISING OUT OF OR IN CONNECTION WITH YOUR USE, OR INABILITY TO USE, THE WEBSITE, ANY WEBSITES LINKED TO IT, ANY CONTENT ON THE WEBSITE OR SUCH OTHER WEBSITES OR ANY SERVICES OR ITEMS OBTAINED THROUGH THE WEBSITE OR SUCH OTHER WEBSITES, INCLUDING ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO, PERSONAL INJURY, PAIN AND SUFFERING, EMOTIONAL DISTRESS, LOSS OF REVENUE, LOSS OF PROFITS, LOSS OF BUSINESS OR ANTICIPATED SAVINGS, LOSS OF USE, LOSS OF GOODWILL, LOSS OF DATA, AND WHETHER CAUSED BY TORT (INCLUDING NEGLIGENCE), BREACH OF CONTRACT OR OTHERWISE, EVEN IF FORESEEABLE.</p>
+                                <p>Anda setuju untuk bekerja sama dengan kami dalam menghapus tautan apa pun yang kami minta
+                                    untuk Anda hapus. Kami berhak untuk menarik izin penautan tanpa pemberitahuan.</p>
 
-                                <p>THE FOREGOING DOES NOT AFFECT ANY LIABILITY WHICH CANNOT BE EXCLUDED OR LIMITED UNDER APPLICABLE LAW.</p>
+                                <p>Kami dapat menonaktifkan semua atau fitur media sosial apa pun dan tautan apa pun kapan
+                                    saja tanpa pemberitahuan atas kebijakan kami.</p>
 
-                                <h4 class="font-weight-semibold">Indemnification</h4>
+                                <h4 class="font-weight-semibold">Tautan dari Situs Web</h4>
 
-                                <p>You agree to defend, indemnify and hold harmless {{ $app_name }}, its affiliates, licensors and service providers, and its and their respective officers, directors, employees, contractors, agents, licensors, suppliers, successors and assigns from and against any claims, liabilities, damages, judgments, awards, losses, costs, expenses or fees (including reasonable attorneys' fees) arising out of or relating to your violation of these Terms of Use or your use of the Website, including, but not limited to, your User Contributions, any use of the Website's content, services and products other than as expressly authorized in these Terms of Use or your use of any information obtained from the Website.</p>
+                                <p>Jika Situs Web berisi tautan ke situs lain dan sumber daya yang disediakan oleh pihak
+                                    ketiga, tautan ini disediakan hanya untuk kenyamanan Anda. Ini termasuk tautan yang
+                                    terkandung dalam iklan, termasuk iklan spanduk dan tautan sponsor. Kami tidak memiliki
+                                    kendali atas isi situs atau sumber daya tersebut, dan tidak bertanggung jawab atasnya
+                                    atau atas kehilangan atau kerusakan apa pun yang mungkin timbul dari penggunaan Anda
+                                    atasnya. Jika Anda memutuskan untuk mengakses situs web pihak ketiga mana pun yang
+                                    terhubung ke Situs Web ini, Anda melakukannya sepenuhnya atas risiko Anda sendiri dan
+                                    tunduk pada syarat dan ketentuan penggunaan untuk situs web tersebut.</p>
 
-                                <h4 class="font-weight-semibold">Governing Law and Jurisdiction</h4>
+                                <h4 class="font-weight-semibold">Penolakan Jaminan</h4>
 
-                                <p>All matters relating to the Website and these Terms of Use and any dispute or claim arising therefrom or related thereto (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the laws of Nigeria without giving effect to any choice or conflict of law provision or rule.</p>
+                                <p>Anda memahami bahwa kami tidak dapat dan tidak menjamin bahwa file yang tersedia untuk
+                                    diunduh dari internet atau Situs Web akan bebas dari virus atau kode destruktif lainnya.
+                                    Anda bertanggung jawab untuk menerapkan prosedur dan pos pemeriksaan yang memadai untuk
+                                    memenuhi persyaratan khusus Anda untuk perlindungan anti-virus dan keakuratan input dan
+                                    output data, dan untuk memelihara sarana eksternal ke situs kami untuk rekonstruksi data
+                                    yang hilang. KAMI TIDAK AKAN BERTANGGUNG JAWAB ATAS KEHILANGAN ATAU KERUSAKAN APA PUN
+                                    YANG DISEBABKAN OLEH SERANGAN DENIAL-OF-SERVICE TERDISTRIBUSI, VIRUS, ATAU MATERI
+                                    BERBAHAYA SECARA TEKNOLOGI LAINNYA YANG DAPAT MENGINFEKSI PERALATAN KOMPUTER, PROGRAM
+                                    KOMPUTER, DATA, ATAU MATERI KEPEMILIKAN LAINNYA KARENA PENGGUNAAN SITUS WEB ATAU LAYANAN
+                                    ATAU ITEM APA PUN YANG DIPEROLEH MELALUI SITUS WEB ATAU PENGUNDUHAN MATERI APA PUN YANG
+                                    DIPOSTING DI ATASNYA, ATAU DI SITUS WEB APA PUN YANG TERKAIT DENGANNYA.</p>
 
-                                <p>Any legal suit, action or proceeding arising out of, or related to, these Terms of Use or the Website shall be instituted exclusively in the federal courts of Nigeria, although we retain the right to bring any suit, action or proceeding against you for breach of these Terms of Use in your country of residence or any other relevant country. You waive any and all objections to the exercise of jurisdiction over you by such courts and to venue in such courts.</p>
+                                <p>PENGGUNAAN SITUS WEB, KONTENNYA, DAN LAYANAN ATAU ITEM APA PUN YANG DIPEROLEH MELALUI
+                                    SITUS WEB ADALAH ATAS RISIKO ANDA SENDIRI. SITUS WEB, KONTENNYA, DAN LAYANAN ATAU ITEM
+                                    APA PUN YANG DIPEROLEH MELALUI SITUS WEB DISEDIAKAN DALAM DASAR "SEBAGAIMANA ADANYA" DAN
+                                    "SEBAGAIMANA TERSEDIA", TANPA JAMINAN APA PUN, BAIK TERSURAT MAUPUN TERSIRAT. BAIK
+                                    {{ strtoupper($app_name) }} MAUPUN ORANG LAIN YANG TERKAIT DENGAN
+                                    {{ strtoupper($app_name) }} TIDAK MEMBUAT JAMINAN ATAU PERNYATAAN APA PUN SEHUBUNGAN
+                                    DENGAN KELENGKAPAN, KEAMANAN, KEANDALAN, KUALITAS, KEAKURATAN ATAU KETERSEDIAAN SITUS
+                                    WEB. TANPA MEMBATASI HAL TERSEBUT DI ATAS, BAIK {{ strtoupper($app_name) }} MAUPUN
+                                    SIAPA PUN YANG TERKAIT DENGAN {{ strtoupper($app_name) }} TIDAK MENYATAKAN ATAU
+                                    MENJAMIN BAHWA SITUS WEB, KONTENNYA, ATAU LAYANAN ATAU ITEM APA PUN YANG DIPEROLEH
+                                    MELALUI SITUS WEB AKAN AKURAT, DAPAT DIANDALKAN, BEBAS KESALAHAN ATAU TIDAK TERGANGGU,
+                                    BAHWA CACAT AKAN DIPERBAIKI, BAHWA SITUS KAMI ATAU SERVER YANG MEMBUATNYA TERSEDIA BEBAS
+                                    DARI VIRUS ATAU KOMPONEN BERBAHAYA LAINNYA ATAU BAHWA SITUS WEB ATAU LAYANAN ATAU ITEM
+                                    APA PUN YANG DIPEROLEH MELALUI SITUS WEB AKAN MEMENUHI KEBUTUHAN ATAU HARAPAN ANDA.</p>
 
-                                <h4 class="font-weight-semibold">Arbitration</h4>
+                                <p>{{ strtoupper($app_name) }} DENGAN INI MENOLAK SEMUA JAMINAN DALAM BENTUK APA PUN, BAIK
+                                    TERSURAT MAUPUN TERSIRAT, BERDASARKAN UNDANG-UNDANG ATAU SEBALIKNYA, TERMASUK TETAPI
+                                    TIDAK TERBATAS PADA JAMINAN NON-PELANGGARAN APA PUN.</p>
 
-                                <p>At {{ $app_name }}’s sole discretion, it may require You to submit any disputes arising from the use of these Terms of Use or the Website, including disputes arising from or concerning their interpretation, violation, invalidity, non-performance, or termination, to final and binding arbitration under the Arbitration and Concilliation Act of Nigeria</p>
+                                <p>HAL-HAL DI ATAS TIDAK MEMPENGARUHI JAMINAN APA PUN YANG TIDAK DAPAT DIKECUALIKAN ATAU
+                                    DIBATASI BERDASARKAN HUKUM YANG BERLAKU.</p>
 
-                                <h4 class="font-weight-semibold">Limitation on Time to File Claims</h4>
+                                <h4 class="font-weight-semibold">Batasan Tanggung Jawab</h4>
 
-                                <p>ANY CAUSE OF ACTION OR CLAIM YOU MAY HAVE ARISING OUT OF OR RELATING TO THESE TERMS OF USE OR THE WEBSITE MUST BE COMMENCED WITHIN ONE (1) YEAR AFTER THE CAUSE OF ACTION ACCRUES, OTHERWISE, SUCH CAUSE OF ACTION OR CLAIM IS PERMANENTLY BARRED.</p>
+                                <p>DALAM KEADAAN APA PUN {{ strtoupper($app_name) }}, AFILIASINYA ATAU PEMBERI LISENSINYA,
+                                    PENYEDIA LAYANAN, KARYAWAN, AGEN, PEJABAT ATAU DIREKTURNYA TIDAK AKAN BERTANGGUNG JAWAB
+                                    ATAS KERUSAKAN DALAM BENTUK APA PUN, BERDASARKAN TEORI HUKUM APA PUN, YANG TIMBUL DARI
+                                    ATAU SEHUBUNGAN DENGAN PENGGUNAAN ANDA, ATAU KETIDAKMAMPUAN ANDA UNTUK MENGGUNAKAN,
+                                    SITUS WEB, SITUS WEB APA PUN YANG TERKAIT DENGANNYA, KONTEN APA PUN DI SITUS WEB ATAU
+                                    SITUS WEB TERSEBUT ATAU LAYANAN ATAU ITEM APA PUN YANG DIPEROLEH MELALUI SITUS WEB ATAU
+                                    SITUS WEB TERSEBUT, TERMASUK KERUSAKAN LANGSUNG, TIDAK LANGSUNG, KHUSUS, INSIDENTAL,
+                                    KONSEKUENSIAL ATAU HUKUMAN, TERMASUK TETAPI TIDAK TERBATAS PADA, CEDERA PRIBADI, RASA
+                                    SAKIT DAN PENDERITAAN, STRES EMOSIONAL, KEHILANGAN PENDAPATAN, KEHILANGAN KEUNTUNGAN,
+                                    KEHILANGAN BISNIS ATAU TABUNGAN YANG DIHARAPKAN, KEHILANGAN PENGGUNAAN, KEHILANGAN NAMA
+                                    BAIK, KEHILANGAN DATA, DAN BAIK DISEBABKAN OLEH PELANGGARAN HUKUM (TERMASUK KELALAIAN),
+                                    PELANGGARAN KONTRAK ATAU SEBALIKNYA, MESKIPUN DAPAT DIPERKIRAKAN.</p>
 
-                                <h4 class="font-weight-semibold">Waiver and Severability</h4>
+                                <p>HAL-HAL DI ATAS TIDAK MEMPENGARUHI TANGGUNG JAWAB APA PUN YANG TIDAK DAPAT DIKECUALIKAN
+                                    ATAU DIBATASI BERDASARKAN HUKUM YANG BERLAKU.</p>
 
-                                <p>No waiver of by {{ $app_name }} of any term or condition set forth in these Terms of Use shall be deemed a further or continuing waiver of such term or condition or a waiver of any other term or condition, and any failure of {{ $app_name }} to assert a right or provision under these Terms of Use shall not constitute a waiver of such right or provision.</p>
+                                <h4 class="font-weight-semibold">Ganti Rugi</h4>
 
-                                <p>If any provision of these Terms of Use is held by a court or other tribunal of competent jurisdiction to be invalid, illegal or unenforceable for any reason, such provision shall be eliminated or limited to the minimum extent such that the remaining provisions of the Terms of Use will continue in full force and effect.</p>
+                                <p>Anda setuju untuk membela, mengganti rugi, dan membebaskan {{ $app_name }},
+                                    afiliasi, pemberi lisensi, dan penyedia layanannya, serta pejabat, direktur, karyawan,
+                                    kontraktor, agen, pemberi lisensi, pemasok, penerus, dan penerima haknya dari dan
+                                    terhadap setiap klaim, kewajiban, kerugian, putusan, penghargaan, kerugian, biaya,
+                                    pengeluaran, atau biaya (termasuk biaya pengacara yang wajar) yang timbul dari atau
+                                    terkait dengan pelanggaran Anda terhadap Ketentuan Penggunaan ini atau penggunaan Anda
+                                    atas Situs Web, termasuk, tetapi tidak terbatas pada, Kontribusi Pengguna Anda, setiap
+                                    penggunaan konten, layanan, dan produk Situs Web selain yang secara tegas diizinkan
+                                    dalam Ketentuan Penggunaan ini atau penggunaan Anda atas informasi apa pun yang
+                                    diperoleh dari Situs Web.</p>
 
-                                <h4 class="font-weight-semibold">Entire Agreement</h4>
+                                <h4 class="font-weight-semibold">Hukum yang Mengatur dan Yurisdiksi</h4>
 
-                                <p>These Terms of Use and our <a target="_blank" href="{{ route('privacy_policy') }}">Privacy Policy</a> constitute the sole and entire agreement between you and {{ $app_name }} with respect to the Website and supersede all prior and contemporaneous understandings, agreements, representations and warranties, both written and oral, with respect to the Website.</p>
+                                <p>Semua hal yang berkaitan dengan Situs Web dan Ketentuan Penggunaan ini dan setiap
+                                    sengketa atau klaim yang timbul darinya atau terkait dengannya (dalam setiap kasus,
+                                    termasuk sengketa atau klaim non-kontraktual), akan diatur oleh dan ditafsirkan sesuai
+                                    dengan hukum Nigeria tanpa memberikan efek pada pilihan atau konflik ketentuan atau
+                                    aturan hukum apa pun.</p>
 
-                                <h5 class="font-weight-semibold">Your Comments and Concerns</h5>
-                                <p>If you do have any comments or concerns regarding but not limited to these Terms of Use. Please contact us.</p>
+                                <p>Setiap gugatan hukum, tindakan, atau proses yang timbul dari, atau terkait dengan,
+                                    Ketentuan Penggunaan ini atau Situs Web akan diajukan secara eksklusif di pengadilan
+                                    federal Nigeria, meskipun kami berhak untuk mengajukan gugatan, tindakan, atau proses
+                                    apa pun terhadap Anda atas pelanggaran Ketentuan Penggunaan ini di negara tempat tinggal
+                                    Anda atau negara lain yang relevan. Anda melepaskan setiap dan semua keberatan terhadap
+                                    pelaksanaan yurisdiksi atas Anda oleh pengadilan tersebut dan terhadap tempat di
+                                    pengadilan tersebut.</p>
 
-                                <p>This website is operated by {{ $app_name }}.</p>
+                                <h4 class="font-weight-semibold">Arbitrase</h4>
 
-                                <p>All other feedback, comments, requests for technical support and other communications relating to the Website should be directed to the School Administrator. Please call {{ $contact_phone }}</p>
+                                <p>Atas kebijakan tunggal {{ $app_name }}, ia dapat meminta Anda untuk menyerahkan
+                                    sengketa apa pun yang timbul dari penggunaan Ketentuan Penggunaan ini atau Situs Web,
+                                    termasuk sengketa yang timbul dari atau menyangkut interpretasi, pelanggaran,
+                                    ketidakabsahan, non-kinerja, atau pengakhirannya, ke arbitrase final dan mengikat
+                                    berdasarkan Undang-Undang Arbitrase dan Konsiliasi Nigeria.</p>
+
+                                <h4 class="font-weight-semibold">Batasan Waktu untuk Mengajukan Klaim</h4>
+
+                                <p>SETIAP PENYEBAB TINDAKAN ATAU KLAIM YANG MUNGKIN ANDA MILIKI YANG TIMBUL DARI ATAU
+                                    TERKAIT DENGAN KETENTUAN PENGGUNAAN INI ATAU SITUS WEB HARUS DIMULAI DALAM WAKTU SATU
+                                    (1) TAHUN SETELAH PENYEBAB TINDAKAN TERSEBUT TIMBUL, JIKA TIDAK, PENYEBAB TINDAKAN ATAU
+                                    KLAIM TERSEBUT DILARANG SECARA PERMANEN.</p>
+
+                                <h4 class="font-weight-semibold">Pengabaian dan Keterpisahan</h4>
+
+                                <p>Tidak ada pengabaian oleh {{ $app_name }} atas syarat atau ketentuan apa pun yang
+                                    ditetapkan dalam Ketentuan Penggunaan ini yang akan dianggap sebagai pengabaian lebih
+                                    lanjut atau berkelanjutan atas syarat atau ketentuan tersebut atau pengabaian atas
+                                    syarat atau ketentuan lainnya, dan setiap kegagalan {{ $app_name }} untuk
+                                    menegaskan hak atau ketentuan berdasarkan Ketentuan Penggunaan ini tidak akan merupakan
+                                    pengabaian hak atau ketentuan tersebut.</p>
+
+                                <p>Jika ada ketentuan dari Ketentuan Penggunaan ini yang dianggap oleh pengadilan atau
+                                    tribunal lain dari yurisdiksi yang kompeten tidak sah, ilegal, atau tidak dapat
+                                    ditegakkan karena alasan apa pun, ketentuan tersebut akan dihilangkan atau dibatasi
+                                    seminimal mungkin sehingga ketentuan yang tersisa dari Ketentuan Penggunaan akan terus
+                                    berlaku sepenuhnya.</p>
+
+                                <h4 class="font-weight-semibold">Seluruh Perjanjian</h4>
+
+                                <p>Ketentuan Penggunaan ini dan <a target="_blank"
+                                        href="{{ route('privacy_policy') }}">Kebijakan Privasi</a> kami merupakan
+                                    satu-satunya dan seluruh perjanjian antara Anda dan {{ $app_name }} sehubungan
+                                    dengan Situs Web dan menggantikan semua pemahaman, perjanjian, representasi, dan jaminan
+                                    sebelumnya dan pada saat yang sama, baik tertulis maupun lisan, sehubungan dengan Situs
+                                    Web.</p>
+
+                                <h5 class="font-weight-semibold">Komentar dan Kekhawatiran Anda</h5>
+                                <p>Jika Anda memiliki komentar atau kekhawatiran mengenai tetapi tidak terbatas pada
+                                    Ketentuan Penggunaan ini. Silakan hubungi kami.</p>
+
+                                <p>Situs web ini dioperasikan oleh {{ $app_name }}.</p>
+
+                                <p>Semua umpan balik, komentar, permintaan untuk dukungan teknis, dan komunikasi lain yang
+                                    berkaitan dengan Situs Web harus diarahkan ke Administrator Sekolah. Silakan hubungi
+                                    {{ $contact_phone }}</p>
                             </div>
                         </div>
                     </div>

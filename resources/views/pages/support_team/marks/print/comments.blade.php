@@ -15,7 +15,10 @@
             </tr>
             <tr>
                 <td><strong>BIAYA SEMESTER BERIKUTNYA:</strong></td>
-                <td><del style="text-decoration-style: double">N</del>{{ $s['next_term_fees_' . strtolower($ct)] }}</td>
+                {{-- Menggunakan operator '??' untuk menangani kunci yang tidak ada --}}
+                <td><del
+                        style="text-decoration-style: double">N</del>{{ $s['next_term_fees_' . strtolower($ct)] ?? '0' }}
+                </td>
             </tr>
         </tbody>
     </table>

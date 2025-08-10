@@ -20,8 +20,7 @@ class PaymentUpdate extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'required|string|min:3',
+            'title' => 'required|string|min:1',
         ];
     }
-
 }

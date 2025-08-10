@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header header-elements-inline bg-success">
-        <h6 class="font-weight-bold card-title">Manage Time Slots - {{ $ttr->name }}</h6>
+        <h6 class="font-weight-bold card-title">Kelola Slot Waktu - {{ $ttr->name }}</h6>
         {!! Qs::getPanelOptions() !!}
     </div>
 
@@ -8,10 +8,10 @@
         <table id="time_slots_table" class="table datatable-button-html5-columns">
             <thead>
                 <tr>
-                    <th>S/N</th>
-                    <th>Start Time</th>
-                    <th>End Time</th>
-                    <th>Action</th>
+                    <th>No.</th>
+                    <th>Waktu Mulai</th>
+                    <th>Waktu Selesai</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -28,28 +28,30 @@
                                     </a>
 
                                     <div class="dropdown-menu dropdown-menu-right">
-                                        {{-- Edit --}}
-                                        <a href="{{ route('ts.edit', $tms->id) }}" class="dropdown-item"><i
-                                                class="icon-pencil"></i> Edit</a>
+                                        {{-- Ubah --}}
+                                        <a href="{{ route('ts.edit', $tms->id) }}" class="dropdown-item">
+                                            <i class="icon-pencil"></i> Ubah
+                                        </a>
 
-                                        {{-- Delete --}}
+                                        {{-- Hapus --}}
                                         @if (Qs::userIsSuperAdmin())
                                             <a id="{{ $tms->id }}" onclick="confirmDelete(this.id)" href="#"
-                                                class="dropdown-item"><i class="icon-trash"></i> Delete</a>
+                                                class="dropdown-item">
+                                                <i class="icon-trash"></i> Hapus
+                                            </a>
                                             <form method="post" id="item-delete-{{ $tms->id }}"
-                                                action="{{ route('ts.destroy', $tms->id) }}" class="hidden">@csrf
-                                                @method('delete')</form>
+                                                action="{{ route('ts.destroy', $tms->id) }}" class="hidden">
+                                                @csrf
+                                                @method('delete')
+                                            </form>
                                         @endif
-
                                     </div>
                                 </div>
                             </div>
                         </td>
                     </tr>
                 @endforeach
-
             </tbody>
         </table>
     </div>
-
 </div>
